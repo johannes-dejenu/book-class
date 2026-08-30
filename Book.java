@@ -18,5 +18,18 @@ public class Book {
         this.price = price;
         return this;
     }
-    
+    public void displayInfo(){
+        System.out.println(title);
+        System.out.println(author);
+        System.out.println(price);
+    }
+
+    public static void main(String[] args) {
+        Book book = new Book();
+        book.setTitle("I want you to be happy")
+            .setAuthor("Jem Calder")
+            .setPrice(26);
+        book.displayInfo();
+    }
+
 }

@@ -1,12 +1,16 @@
 public record Book(String title, String author, int price) {
 
-    public Book{
+    public Book(String title, String author, int price){
         if (price < 0){
             throw new IllegalArgumentException("Price can't be negative.");
         }
         if (title.isBlank()){
             throw new IllegalArgumentException("Title can't be blank.");
         }
+
+        this.title = title;
+        this.author = author;
+        this.price = price;
     }
 
     public static void main(String[] args) {

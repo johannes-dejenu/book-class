@@ -4,7 +4,7 @@ public record Book(String title, String author, int price) {
         if (price < 0){
             throw new IllegalArgumentException("Price can't be negative.");
         }
-        if (title.equals("")){
+        if (title.isBlank()){
             throw new IllegalArgumentException("Title can't be blank.");
         }
     }
